@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Gap Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skills Gap Analyzer</h1>
+        <form id="skills-form">
+            <label for="career-goal">Career Goal:</label>
+            <select id="career-goal" required>
+                <option value="">Select your career goal</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Senior Web Developer">Senior Web Developer</option>
+                <option value="Data Scientist">Data Scientist</option>
+                <option value="Mobile App Developer">Mobile App Developer</option>
+                <option value="UI/UX Designer">UI/UX Designer</option>
+            </select>
+            
+            <div id="skills-section">
+                <h2>Your Current Skills:</h2>
+                <div id="skills-list">
+                    <div class="skill-entry">
+                        <input type="text" class="skill-name" placeholder="Skill name" required>
+                        <input type="number" class="skill-rating" min="1" max="5" placeholder="Rating (1-5)" required>
+                        <button type="button" class="remove-skill">Remove</button>
+                    </div>
+                </div>
+                <button type="button" id="add-skill">Add Another Skill</button>
+            </div>
+            
+            <button type="submit">Analyze Skills Gap</button>
+        </form>
+        
+        <div id="analysis-result" style="display: none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
